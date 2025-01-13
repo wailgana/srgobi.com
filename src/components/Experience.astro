@@ -1,22 +1,52 @@
----
+--- 
 import ExperienceItem from './ExperienceItem.astro';
 
 const EXPERIENCIE = [
-	{
-		date: 'Enero 2024 - Actualmente...',
-		title: 'Desarrollador Full Stack - Freelancer',
-		description:
-			'Me dedico a crear soluciones tecnológicas personalizadas para clientes particulares y empresas, gestionando proyectos completos desde la planificación y diseño de la arquitectura hasta la implementación de funcionalidades tanto en el front-end como en el back-end. A lo largo de este tiempo, he trabajado en proyectos como sistemas avanzados de bots para Discord, aplicaciones de gestión de contenido y plataformas de monetización. Mis soluciones se caracterizan por su eficiencia, seguridad y escalabilidad, siempre alineadas con los objetivos de negocio del cliente.'
-	}
+  {
+    date: '2025 - actuellement',
+    title: 'Alternance en Développement LUA et Création d\'Applications',
+    description: 'Travail en alternance sur le développement de scripts en <strong>LUA</strong> et la création d\'<strong>applications</strong> dans le cadre de projets professionnels, à partir de juillet 2025.'
+  },
+  {
+    date: '2024 - 2025',
+    title: 'Stage Professionnel en Cybersécurité',
+    description: 'Mission en <strong>Cryptographie</strong> et <strong>Stéganographie d\'image 3D</strong> dans un cadre de développement en cybersécurité.'
+  },
+  {
+    date: '2023 - 2025 (actuellement)',
+    title: 'BUT Informatique',
+    description: 'Étudiant en 3ème année de <strong>BUT Informatique</strong>, me préparant à devenir <strong>Ingénieur en Cybersécurité</strong>. Formation en cours jusqu\'à juillet 2025.'
+  },
+  {
+    date: '2021',
+    title: 'Baccalauréat Général avec option Mathématiques, Physique, NSI',
+    description: 'Obtention du <strong>Bac avec mention</strong>, spécialisation en <strong>Mathématiques</strong>, <strong>Physique</strong> et <strong>NSI</strong> (Numérique et Sciences Informatiques).'
+  }
 ];
 ---
 
+<style>
+  .experience-item {
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .experience-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+
+  .experience-item strong {
+    font-weight: bold;
+  }
+</style>
+
 <ol class="relative mt-16">
-	{
-		EXPERIENCIE.map((experiencie) => (
-			<li class="">
-				<ExperienceItem {...experiencie} />
-			</li>
-		))
-	}
+  {EXPERIENCIE.map((experience) => (
+    <li class="experience-item">
+      <ExperienceItem {...experience} />
+    </li>
+  ))}
 </ol>
