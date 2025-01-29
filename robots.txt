@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wailgana.github.io/srgobi.com/sitemap-index.xml
